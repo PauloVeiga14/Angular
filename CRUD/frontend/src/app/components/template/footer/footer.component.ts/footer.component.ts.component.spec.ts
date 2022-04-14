@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Footer.Component.TsComponent } from './footer.component.ts.component';
+import { FooterComponent } from './footer.component.ts.component';
 
 describe('Footer.Component.TsComponent', () => {
-  let component: Footer.Component.TsComponent;
-  let fixture: ComponentFixture<Footer.Component.TsComponent>;
+  let component: FooterComponent;
+  let fixture: ComponentFixture<FooterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Footer.Component.TsComponent ]
+      declarations: [ FooterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Footer.Component.TsComponent);
+    fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
