@@ -1,3 +1,4 @@
+import { TemplateService } from './../template.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private templateService: TemplateService) { }
 
   ngOnInit(): void {
+  }
+
+  homeClick(): void {
+    this.templateService.homeClick();
+  }
+
+  productsClick(): void {
+    this.templateService.productsClick();
   }
 
 }

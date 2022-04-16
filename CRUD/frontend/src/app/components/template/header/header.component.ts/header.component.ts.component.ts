@@ -1,3 +1,4 @@
+import { TemplateService } from './../../template.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  localization = {
+    icon: 'home',
+    page: 'Início',
+  }
+
+  constructor( private templateService: TemplateService) { }
 
   ngOnInit(): void {
+  }
+
+  logoClick(): void {
+    this.templateService.homeClick();
+    this.localization.icon = this.templateService.localization.icon;
+    this.localization.page = this.templateService.localization.page;
   }
 
 }
