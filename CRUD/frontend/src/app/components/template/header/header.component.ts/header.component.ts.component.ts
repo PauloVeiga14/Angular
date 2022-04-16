@@ -1,5 +1,5 @@
 import { TemplateService } from './../../template.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChange } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +16,9 @@ export class HeaderComponent implements OnInit {
   constructor( private templateService: TemplateService) { }
 
   ngOnInit(): void {
+  }
+
+  ngOnChanges(changes: SimpleChange): void {
   }
 
   logoClick(): void {
