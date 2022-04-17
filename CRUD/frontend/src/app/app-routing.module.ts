@@ -1,3 +1,4 @@
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 import { ViewportScroller } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -19,7 +20,10 @@ const routes: Routes = [{
   component: ProductCreateComponent,
 }, {
   path: "products/update/:id",
-  component: ProductUpdateComponent
+  component: ProductUpdateComponent,
+}, {
+  path: "products/delete/:id",
+  component: ProductDeleteComponent,
 }];
 
 @NgModule({
